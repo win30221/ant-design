@@ -1,5 +1,4 @@
 # Each `push on master` will persist image-snapshots that used as compare target in visual regression.
-# TODO: 校验分支
 
 name: Visual Regression Persist Start
 

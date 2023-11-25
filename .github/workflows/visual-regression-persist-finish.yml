@@ -1,5 +1,4 @@
 # Each `push on master` will persist image-snapshots that used as compare target in visual regression.
-# TODO: 校验分支必须是 master
 
 name: Visual Regression Persist Finish
 
@@ -80,6 +79,7 @@ jobs:
           path: imageSnapshots
 
       - name: Persist to Snapshot Repo
+        if: github.event.pull_request.head.ref == 'master'
         id: persist
         continue-on-error: true
         env:
